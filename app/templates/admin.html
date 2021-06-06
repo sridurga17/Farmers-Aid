@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin Login </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">   
+  </head>
+  <body>
+    <div align="center">
+    <div align="center" class="border">
+      <div class="header">
+        <h1 class="word">Admin</h1>
+      </div></br></br></br>
+      <h2 class="word">
+        <form action="" method="post">
+        <div ></div>
+        <input id="username" type="text" placeholder="Enter Your Username" name="username" class="textbox"
+        value="{{
+          request.form.username }}">
+        </br></br>
+         <input type="password" placeholder="Enter Your Password" name="password" class="textbox" value="{{
+          request.form.password }}">
+        </br></br>  
+        <input type="submit" class="btn" value="Login">
+        </form>
+      </h2>
+    </div>
+    </div>
+  </body>
+</html>
+
+
+
+

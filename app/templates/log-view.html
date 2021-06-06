@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+</style>
+  <!--meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- //font-awesome icons -->
+
+  <!--stylesheets-->
+
+  <!--//stylesheets-->
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <ul class="nav navbar-nav">
+          <li class="active"><a href="{{url_for('adminview')}}">Dashboard</a></li>
+          <li><a href="{{url_for('add')}}">Add Users</a></li>
+          <li><a href="{{url_for('logview')}}">Users Data</a></li>
+          <li><a href="{{url_for('cropview')}}">Crop Reccomendation Data</a></li>
+          <li><a href="{{url_for('disview')}}">Diseases Data</a></li>
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{{ url_for('main') }}">Logout</a></li>
+     
+    </ul>
+    
+  </div>
+    
+  </nav>
+  
+
+   <form action="{{ url_for('logview') }}" method="post">
+    <h2 align="center">Registered Users Data</h2>
+        <table class="center"> 
+            <tr>
+                <th>S.No.</th>
+                <th>User Name</th>
+                <th>Email ID</th>
+            {% for row in data %}  
+                <tr> 
+                    <td>{{row.id}}</td>
+                    <td>{{row.username}}</td>
+                    <td>{{row.email}}</td> 
+                    
+                </tr> 
+            {% endfor %}  
+        </table> 
+    </form>
+
+</body>
+</html>

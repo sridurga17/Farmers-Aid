@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Main</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+  <style>
+.container { 
+  height: 200px;
+  position: relative;
+
+}
+
+.center {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 15px solid green;
+  background-color: white;
+
+}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="center">
+				<div class="col-sm-6">
+					<a href="{{ url_for('admin') }}">
+					<img src="{{ url_for('static', filename='images/admin.jpg') }}" class="img-fluid" alt="" />
+					
+					<div>
+						<h4>Admin</h4>
+					</div>
+					</a>
+				</div>
+				</span>
+				</span>
+				</span>
+				</span>
+				<div class="col-sm-6">
+					<a href="{{ url_for('login') }}">
+					<img src="{{ url_for('static', filename='images/user.jpg') }}" class="img-fluid" alt="" />
+					
+					<div>
+						<h4>User</h4>
+					</div>
+					</a>
+				</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+
+
